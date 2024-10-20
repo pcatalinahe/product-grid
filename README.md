@@ -1,0 +1,1 @@
+E-commerce home page with grid display showcasing 8 items with an image, title,  short description, and price.
