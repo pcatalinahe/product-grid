@@ -2,21 +2,22 @@
    height: 100vh;
 } */
 
+
 body {
-    color: azure;
-    text-align: center;
-    height: 100vh;
+    color: azure; /* color for page text  */
+    text-align: center; /* center most elements in page  */
+    height: 100vh;  /* stops page from scrolling */
     width: auto;
-    margin: 0;
-    background-image: url(images/halloween-background.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: "Nunito", sans-serif;
+    margin: 0; /* reset elements' margin */
+    background-image: url(images/halloween-background.jpg); /* adds background img */
+    background-position: center; /* positions background img */
+    background-repeat: no-repeat; /* only 1 background img */
+    background-size: cover; /* background img is displayed fully */
+    font-family: "Nunito", sans-serif; /* change font style */
 }
 
 h3 {
-    margin-bottom: 2%;
+    margin-bottom: 2%; /* adds space under h3 */
 }
 
 /* .navbar {
@@ -24,48 +25,39 @@ h3 {
     box-shadow: 1;
 } */
 
-.products {
-    background-color: transparent;
-}
 
-.container {
-    display: grid;
-    justify-items:center;
-    align-items: stretch;
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(2, 1fr);
-    column-gap: 1%;
-    row-gap: 3%;
-    justify-content: center;
+.container { /* container div  */
+    display: grid; /* creates grid  */
     align-content: center;
+    justify-content: center;  /* centers container in page  */
+    justify-items:center;  /* centers grid container and items */
+    grid-template-columns: repeat(4, auto);  /* sets 4 columns for grid, auto size  */
+    grid-template-rows: repeat(2, auto);  /* sets 2 rows for items to be displayed in, auto size */
+    column-gap: 1%;  /* space between columns */
+    row-gap: 3%;  /* space between rows  */
 }
 
-.container > div {
-    background-color: rgba(255, 255, 255, 0.187);
+.container > div { /* items inside container div (.card) */
+    background-color: rgba(255, 255, 255, 0.187); /* background color for each grid item (divs), has light opacity for fading effect  */
     text-align: center;
-    padding: 5px;
-    font-size: 30px;
-}
-
-.about {
-    font-weight: 200;
-    font-style: normal;
-    font-size: 10px;
-    text-align: left;
-}
-
-.card {
-    box-shadow: 0 10px 20px black;
+    padding: 5px; /* padding for div items inside container div */
+    box-shadow: 0 10px 20px black; /* adds 3d effect to grid items  */
     width: 250px;
     height: 300px;
 }
 
+/* 
+.card { same as child combinator above
+    box-shadow: 0 10px 20px black;
+    width: 250px;
+    height: 300px; 
+} */
+
 .img {
-    padding: 3px;
+    padding: 3px; 
 }
 
-
-/* #img2:hover {
+/* #img2:hover { trying to change pictures on hover
     visibility: hidden;
 } */
 
@@ -74,38 +66,56 @@ h3 {
     font-size: 20px;
 }
 
-h6 {
+h6 { 
     margin: 0;
 }
 
 .about {
+    font-weight: 200;
+    font-style: normal;
+    font-size: 10px;
+    text-align: left;
     margin: 5%;
+}
+
+/* remove top margin to item2*/
+#diff {
+    margin-top: 0px !important;
+}
+
+/* add higher (display button lower) top margin to item 1, 4, 6, & 7 */
+.lower {
+    margin-top: 5%;
 }
 
 button {
     cursor: pointer;
+    margin-top: 2%;
+    padding: 2%;
 }
 
 button:hover {
-    background-color: darkmagenta;
+    background-color: darkmagenta; /* change color on hover  */
 }
+
 
 .price-add{
     display: flex;
-    justify-content: center;
+    justify-content: center; /* center buttons in .card  */
 }
 
 #sale {
-    text-decoration: line-through;
+    text-decoration: line-through; /* different styling for marked down price  */
     color: gray;
 }
 
-#save {
+#savings { /* style for text containing saving's total */
     font-weight: 400;
     font-size: 2px;
+    margin-top: 2%;
 }
 
-/* @media (hover: hover) {
+/* @media (hover: hover) { //trying to change pictures on hover
     #img2:hover {
          background-image: url('images/cinnamoroll-back.png');
          height: 150px;
